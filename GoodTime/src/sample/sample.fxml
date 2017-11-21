@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <StackPane layoutX="192.0" layoutY="216.0" prefHeight="150.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="button" mnemonicParsing="false" onAction="#pressButton" prefHeight="83.0" prefWidth="123.0" text="GO!" />
+         </children>
+      </StackPane>
+      <Label fx:id="labelEven" layoutX="25.0" layoutY="137.0" prefHeight="63.0" prefWidth="235.0">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelOdd" layoutX="334.0" layoutY="137.0" prefHeight="63.0" prefWidth="235.0">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelText" layoutX="131.0" layoutY="28.0" prefHeight="73.0" prefWidth="305.0" text="     Let's go!" textAlignment="CENTER" textFill="#025df5">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
