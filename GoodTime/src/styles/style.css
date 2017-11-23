@@ -1,0 +1,20 @@
+.button{
+    -fx-background-radius: 50%;
+    -fx-background-color: #00A2E8;
+}
+.button:hover{
+    -fx-background-color: red;
+}
+#buttonAction1{
+    -fx-background-color: greenyellow; 
+}
+#buttonAction2{
+    -fx-background-color: #00A2E8;  
+}
+
+#buttonAction2:hover{
+    -fx-background-color: red;
+}
+#buttonAction1:hover{
+    -fx-background-color: red;
+}
