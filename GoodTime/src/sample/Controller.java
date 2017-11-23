@@ -1,6 +1,5 @@
 package sample;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -9,7 +8,9 @@ import java.util.Timer;
 public class Controller {
     @FXML
     Label labelEven, labelOdd, labelText;
-
+    @FXML
+    Button button;
+    
     Timer timerEvent = new Timer();
     Timer timerOdd = new Timer();
 
@@ -19,13 +20,14 @@ public class Controller {
         if(cnt % 2 == 0) {
             labelOdd.setText("");
             labelEven.setText("Use Time");
+             button.setId("buttonAction1");
         }
         else {
             labelEven.setText("");
             labelOdd.setText("Unuse Time");
+            button.setId("buttonAction2");
         }
         cnt ++;
     }
 
 }
-
