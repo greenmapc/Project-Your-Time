@@ -1,26 +1,18 @@
 package sample;
 
-<<<<<<< master
-=======
 import entity.Stopwatch;
 import entity.Updater;
->>>>>>> master
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.control.Button;
 
 import java.util.Timer;
 
 public class Controller {
     @FXML
-<<<<<<< master
-    Label labelEven, labelOdd, labelStartText;
+    private Label labelEven, labelOdd, labelStartText;
     @FXML
-    Button button;
-    
-    Timer timerEvent = new Timer();
-    Timer timerOdd = new Timer();
-=======
-    private Label labelEven, labelOdd, labelText;
+    private Button button;
     private Stopwatch stopwatchEven = new Stopwatch();
     private Stopwatch stopwatchOdd = new Stopwatch();
     private int cnt = 0;
@@ -31,30 +23,18 @@ public class Controller {
     public void initialize() {
         timer.schedule(updater, 0, 1000);
     }
->>>>>>> master
 
     public void pressButton() {
-<<<<<<< master
         labelStartText.setText("");
-        if(cnt % 2 == 0) {
-            labelOdd.setText("");
-            labelEven.setText("Use Time");
-             button.setId("buttonUnUseTime");
-        }
-        else {
-            labelEven.setText("");
-            labelOdd.setText("Unuse Time");
-            button.setId("buttonUseTime");
-=======
-        labelText.setText("");
         if (cnt % 2 == 0) {
             stopwatchEven.start();
             stopwatchOdd.stop();
+            button.setId("buttonUnUseTime");
 
         } else {
             stopwatchOdd.start();
             stopwatchEven.stop();
->>>>>>> master
+            button.setId("buttonUseTime");
         }
         cnt++;
     }

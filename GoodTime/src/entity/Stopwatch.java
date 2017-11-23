@@ -21,29 +21,57 @@ public class Stopwatch {
         }
     }
 
-    public String getTimeSec() {
+    public String getTimeSec()
+    {
         long elapsed;
         if (running) {
             elapsed = (System.currentTimeMillis() - this.startTime + this.currentTime) / 1000;
         } else {
-            elapsed = (this.stopTime - this.startTime + this.currentTime) / 1000;
+            elapsed = this.currentTime / 1000;
         }
 
-        return format(elapsed);
+        long cur = elapsed;
+        int[] res = new int[6];
+
+        int hours = (int)elapsed / 3600;
+        int minutes = ((int)elapsed % 3600) / 60;
+        int seconds = (int)elapsed % 60;
+
+        format(hours, res, "hours");
+        format(minutes, res, "minutes");
+        format(seconds, res, "seconds");
+
+        return toString(res);
+
     }
 
-    private String format(long sec) {
-        long hours = sec / 3600;
-        long min = (sec % 3600) / 60;
-        long s = sec % 60;
-        StringBuilder f = new StringBuilder();
-        f.append(hours);
-        f.append(":");
-        f.append(min);
-        f.append(":");
-        f.append(s);
-        String result = f.toString();
-        return result;
+    private void format(long time, int[] res, String type) {
+        int ind1 = 4, ind2 = 5;
+        if(type.equals("minutes")) {
+            ind1 = 2;
+            ind2 = 3;
+        }
+        else {
+            if(type.equals("hours")) {
+                ind1 = 0;
+                ind2 = 1;
+            }
+        }
+
+        if(time > 9) {
+            res[ind1] = (int)time / 10;
+            res[ind2] = (int)time % 10;
+        }
+        else {
+            res[ind2] = (int)time;
+        }
+    }
+
+    private String toString(int[] res) {
+        String r = String.valueOf(res[0]) + String.valueOf(res[1]) + ":";
+        r += String.valueOf(res[2]) + String.valueOf(res[3]) + ":";
+        r += String.valueOf(res[4]) + String.valueOf(res[5]);
+        return r;
     }
 
 }

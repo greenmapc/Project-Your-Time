@@ -13,13 +13,10 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         Scene scene = new Scene(root);
-        
-        scene.getStylesheets().add("styles/style.css");
         primaryStage.setScene(scene);
+        scene.getStylesheets().add("styles/style.css");
         primaryStage.setTitle("Your Time");
         primaryStage.getIcons().add(new Image("/img/Icon.jpg"));
-        primaryStage.setMaxHeight(400);
-        primaryStage.setMaxWidth(600);
         primaryStage.show();
     }
 
