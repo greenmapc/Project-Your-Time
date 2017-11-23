@@ -1,20 +1,39 @@
 .button{
+    -fx-display:block;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-preHeight:600;
+    -fx-preWidth:600;
+    -fx-padding:40px 39px 40px 39px;
     -fx-background-radius: 50%;
     -fx-background-color: #00A2E8;
+    -fx-text-fill:#ffffffc4;
+    -fx-font-family:Tahoma Bold;
+    -fx-font-size:43;
+   
+   
 }
 .button:hover{
-    -fx-background-color: red;
+   -fx-background-color: linear-gradient(to top, #6699ff, #00A2e8);
 }
-#buttonAction1{
-    -fx-background-color: greenyellow; 
+#buttonUseTime{
+    -fx-background-color: #00A2e8;
+    
 }
-#buttonAction2{
-    -fx-background-color: #00A2E8;  
+#buttonUnUseTime{
+    -fx-background-color: #66ff99; 
 }
 
-#buttonAction2:hover{
-    -fx-background-color: red;
+#buttonUseTime:hover{
+    -fx-background-color: linear-gradient(to top, #6699ff, #00A2e8);
 }
-#buttonAction1:hover{
-    -fx-background-color: red;
+#buttonUnUseTime:hover{
+   -fx-background-color: linear-gradient(to top, #99ffcc, #66ff99);
+}
+#labelStartText{
+    -fx-preHeight:73;
+    -fx-preWidth:305;
+    -fx-font-size:48;
+    -fx-text-fill:#ffffffc4;
+    -fx-font-family:Tahoma Bold;
+    -fx-font-size:43;
 }
