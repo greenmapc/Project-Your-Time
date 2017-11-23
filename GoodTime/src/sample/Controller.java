@@ -7,7 +7,7 @@ import java.util.Timer;
 
 public class Controller {
     @FXML
-    Label labelEven, labelOdd, labelText;
+    Label labelEven, labelOdd, labelStartText;
     @FXML
     Button button;
     
@@ -16,18 +16,19 @@ public class Controller {
 
     private int cnt = 0;
     public void pressButton() {
-        labelText.setText("");
+        labelStartText.setText("");
         if(cnt % 2 == 0) {
             labelOdd.setText("");
             labelEven.setText("Use Time");
-             button.setId("buttonAction1");
+             button.setId("buttonUnUseTime");
         }
         else {
             labelEven.setText("");
             labelOdd.setText("Unuse Time");
-            button.setId("buttonAction2");
+            button.setId("buttonUseTime");
         }
         cnt ++;
     }
 
 }
+
