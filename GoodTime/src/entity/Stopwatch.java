@@ -14,9 +14,9 @@ public class Stopwatch {
     }
 
     public void stop() {
-        if(running) {
+        if (running) {
             this.stopTime = System.currentTimeMillis();
-            this.currentTime = this.currentTime + this.stopTime-this.startTime;
+            this.currentTime = this.currentTime + this.stopTime - this.startTime;
             this.running = false;
         }
     }
@@ -28,7 +28,22 @@ public class Stopwatch {
         } else {
             elapsed = (this.stopTime - this.startTime + this.currentTime) / 1000;
         }
-        return Long.toString(elapsed);
+
+        return format(elapsed);
+    }
+
+    private String format(long sec) {
+        long hours = sec / 3600;
+        long min = (sec % 3600) / 60;
+        long s = sec % 60;
+        StringBuilder f = new StringBuilder();
+        f.append(hours);
+        f.append(":");
+        f.append(min);
+        f.append(":");
+        f.append(s);
+        String result = f.toString();
+        return result;
     }
 
 }
