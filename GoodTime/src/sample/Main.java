@@ -13,11 +13,13 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         Scene scene = new Scene(root);
-        primaryStage.setScene(scene);
+        primaryStage.setScene(scene); 
+        primaryStage.setResizable(false);
         scene.getStylesheets().add("styles/style.css");
         primaryStage.setTitle("Your Time");
         primaryStage.getIcons().add(new Image("/img/Icon.jpg"));
         primaryStage.show();
+        
     }
 
 
@@ -25,3 +27,4 @@ public class Main extends Application {
         launch(args);
     }
 }
+
