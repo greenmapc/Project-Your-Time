@@ -12,45 +12,47 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #585858;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
-   <children>
-      <StackPane layoutX="192.0" layoutY="216.0">
-         <children>
-            <Button fx:id="button" mnemonicParsing="false" onAction="#pressButton" text="GO">
+<Pane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #585858;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>       
+<!--     <StackPane layoutX="192.0" layoutY="216.0">-->
+<!--         <children>-->
+            <Button fx:id="button" layoutX="230.0" layoutY="225.0" mnemonicParsing="false" onAction="#pressButton" text="GO">
             </Button>
-         </children>
-      </StackPane>
-      <Label fx:id="labelEven" layoutX="25.0" layoutY="137.0" prefHeight="63.0" prefWidth="235.0">
+<!--         </children>
+      </StackPane>-->
+      <Label fx:id="labelEven" layoutX="25.0" layoutY="100.0" styleClass="timerLabel">
          <font>
-            <Font size="32.0" />
+            <Font size="50.0" />
          </font>
       </Label>
-      <Label fx:id="labelOdd" layoutX="334.0" layoutY="137.0" prefHeight="63.0" prefWidth="235.0">
+      <Label fx:id="labelOdd" layoutX="320.0" layoutY="100.0" styleClass="timerLabel">
          <font>
-            <Font size="32.0" />
+            <Font size="50.0" />
          </font>
       </Label>
-      <Label fx:id="labelStartText" layoutX="131.0" layoutY="77.0" text="Your Time">
+<!--      <Label fx:id="labelStartText" layoutX="185.0" layoutY="50.0" text="YOUR TIME">
          <font>
             <Font size="48.0" />
          </font>
-         <effect>
-            <DropShadow radius="21.6625" width="67.65" />
-         </effect>
-      </Label>
-      <MenuBar fx:id="menuBar" layoutX="-2.0" layoutY="1.0" prefHeight="31.0" prefWidth="600.0">
+      </Label>-->
+<!--      <MenuBar layoutX="1.0" prefHeight="32.0" prefWidth="600.0">
          <menus>
-            <Menu mnemonicParsing="true" text="Statistics">
+            <Menu mnemonicParsing="false" text="File">
                <items>
-                  <MenuItem fx:id="open" mnemonicParsing="true" text="Open" />
+                  <MenuItem mnemonicParsing="false" text="Close" />
                </items>
             </Menu>
-            <Menu mnemonicParsing="true" text="Help">
+            <Menu mnemonicParsing="false" text="Edit">
                <items>
-                  <MenuItem fx:id="guide" mnemonicParsing="true" onAction="#pressMenuBar" text="Guide" />
+                  <MenuItem mnemonicParsing="false" text="Delete" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
                </items>
             </Menu>
          </menus>
-      </MenuBar>
+      </MenuBar>-->
    </children>
 </Pane>
