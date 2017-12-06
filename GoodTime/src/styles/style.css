@@ -1,0 +1,42 @@
+.button{
+    -fx-display:inline-block;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-padding:30px 29px 30px 29px; 
+    -fx-background-radius: 50%;
+    -fx-background-color: #66ff99; 
+    -fx-text-fill:white;
+    -fx-font-family:Tahoma Bold;
+    -fx-font-size:43; 
+
+}
+.button:hover{
+   -fx-background-color: linear-gradient(to top, #99ffcc, #66ff99);
+}
+#buttonUseTime{
+    -fx-background-color: #66ff99; 
+    
+}
+#buttonUnUseTime{
+    -fx-background-color: #ff5050;
+}
+
+#buttonUseTime:hover{
+    -fx-background-color: linear-gradient(to top, #99ffcc, #66ff99);
+}
+#buttonUnUseTime:hover{
+   -fx-background-color: linear-gradient(to top, #ff3333, #ff5050);
+}
+#labelStartText{
+    -fx-preHeight:73;
+    -fx-preWidth:305;
+    -fx-font-size:48;
+    -fx-text-fill:black;
+    -fx-font-family:Tahoma Bold;
+    -fx-font-size:43;
+}
+.timerLabel{
+    -fx-font-size:60;
+    -fx-text-fill:#ffffffc4;
+    -fx-preHeight:63;
+    -fx-preWidth:235;
+}
