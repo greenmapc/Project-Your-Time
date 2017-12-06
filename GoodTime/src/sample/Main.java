@@ -1,11 +1,15 @@
 package sample;
 
+import entity.StoreOfDays;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 
 public class Main extends Application {
@@ -22,6 +26,10 @@ public class Main extends Application {
         
     }
 
+    @Override
+    public void stop() throws IOException {
+        System.exit(0);
+    }
 
     public static void main(String[] args) {
         launch(args);
