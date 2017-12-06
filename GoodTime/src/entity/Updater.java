@@ -4,6 +4,7 @@ package entity;
 import javafx.application.Platform;
 import sample.Controller;
 
+import java.io.IOException;
 import java.util.TimerTask;
 
 
@@ -20,9 +21,17 @@ public class Updater extends TimerTask {
             @Override
             public void run() {
                 if (contr.getCnt() % 2 == 0) {
-                    contr.setTextEven();
+                    try {
+                        contr.setTextEven();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                 } else {
-                    contr.setTextOdd();
+                    try {
+                        contr.setTextOdd();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                 }
             }
         });

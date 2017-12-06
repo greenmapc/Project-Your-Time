@@ -13,6 +13,10 @@ public class Stopwatch {
         this.running = true;
     }
 
+    public void setCurrentTime(long currentTime) {
+        this.currentTime = currentTime;
+    }
+
     public void stop() {
         if (running) {
             this.stopTime = System.currentTimeMillis();
