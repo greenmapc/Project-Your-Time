@@ -5,20 +5,20 @@ import java.io.FileNotFoundException;
 
 public class Day {
     private String date;
-    private String usefullTime;
+    private String usefulTime;
     private String uselessTime;
 
     public Day() {
         this.uselessTime = "00:00:00";
-        this.usefullTime = "00:00:00";
+        this.usefulTime = "00:00:00";
     }
 
     public void setDate(String date) {
         this.date = date;
     }
 
-    public void setUsefullTime(String usefullTime) {
-        this.usefullTime = usefullTime;
+    public void setUsefulTime(String usefulTime) {
+        this.usefulTime = usefulTime;
     }
 
     public void setUselessTime(String uselessTime) {
@@ -29,8 +29,8 @@ public class Day {
         return date;
     }
 
-    public String getUsefullTime() {
-        return usefullTime;
+    public String getUsefulTime() {
+        return usefulTime;
     }
 
     public String getUselessTime() {
@@ -39,17 +39,17 @@ public class Day {
 
     @Override
     public String toString() {
-        return date+" "+usefullTime+" "+uselessTime;
+        return date+" "+usefulTime+" "+uselessTime;
     }
 
-    public int compareToUsefull(Day day){
+    public int compareToUseful(Day day){
         if(day==null){
             return -1;
         }
         int result = 0;
-        String [] current = this.getUsefullTime().split(":");
+        String [] current = this.getUsefulTime().split(":");
         int cur = Integer.parseInt(current[0])*360+Integer.parseInt(current[1])*60+Integer.parseInt(current[2]);
-        current = day.getUsefullTime().split(":");
+        current = day.getUsefulTime().split(":");
         int comp = Integer.parseInt(current[0])*360+Integer.parseInt(current[1])*60+Integer.parseInt(current[2]);
         if(cur>comp){
             result = 1;

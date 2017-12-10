@@ -18,7 +18,7 @@ public class StoreOfDays extends ArrayList<Day> {
             String[] parse = s.split(" ");
             Day day = new Day();
             day.setDate(parse[0]);
-            day.setUsefullTime(parse[1]);
+            day.setUsefulTime(parse[1]);
             day.setUselessTime(parse[2]);
             this.add(day);
         }
@@ -31,13 +31,13 @@ public class StoreOfDays extends ArrayList<Day> {
             day = this.get(0);
         }
         for (int i = 0; i < this.size(); i++){
-            if(this.get(i).compareToUsefull(day)==1){
+            if(this.get(i).compareToUseful(day)==1){
                 day = this.get(i);
             }
         }
         if(day!=null){
             result = "Самый полезный день: " + day.getDate() + "\n" +
-                    "Полезного времени " + day.getUsefullTime();
+                    "Полезного времени " + day.getUsefulTime();
         }
             return result;
     }
@@ -55,7 +55,7 @@ public class StoreOfDays extends ArrayList<Day> {
         }
         if(day!=null){
             result = "Самый бесполезный день: " + day.getDate() + "\n" +
-                    "Бесполезного времени " + day.getUsefullTime();
+                    "Бесполезного времени " + day.getUsefulTime();
         }
         return result;
     }

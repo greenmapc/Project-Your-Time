@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="117.0" prefWidth="369.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller2">
+   <children>
+      <TableView layoutX="1.0" prefHeight="171.0" prefWidth="369.0" fx:id="table">
+        <columns>
+          <TableColumn fx:id="dayColumn" prefWidth="100.0" text="Day" />
+          <TableColumn fx:id="usefulTimeColumn" prefWidth="100.0" text="Useful" />
+          <TableColumn fx:id="uselesslTimeColumn" prefWidth="100.0" text="Useless" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

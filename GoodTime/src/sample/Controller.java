@@ -4,29 +4,38 @@ import entity.Day;
 import entity.Stopwatch;
 import entity.StoreOfDays;
 import entity.Updater;
+import java.awt.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.Button;
+
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Timer;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 public class Controller {
     @FXML
     private Label labelEven, labelOdd, labelStartText;
     @FXML
     private Button button;
+    private Button button1;
+    private Button button2;
 
     private Stopwatch stopwatchEven;
     private Stopwatch stopwatchOdd;
-    private int cnt ;
-    private Updater updater ;
-    private Timer timer ;
+    private int cnt;
+    private Updater updater;
+    private Timer timer;
     private Day day;
     private StoreOfDays repo;
+    
 
 
     @FXML
@@ -42,12 +51,13 @@ public class Controller {
         day.setDate(format.format(dateNow));
         if(repo.size()!=0 && repo.get(repo.size()-1).getDate().equals(day.getDate())){
             day = repo.get(repo.size()-1);
-            stopwatchEven.setCurrentTime(Day.getSec(day.getUsefullTime()));
+            stopwatchEven.setCurrentTime(Day.getSec(day.getUsefulTime()));
             stopwatchOdd.setCurrentTime(Day.getSec(day.getUselessTime()));
         } else {
             repo.add(day);
         }
         timer.schedule(updater, 0, 1000);
+ 
     }
 
     public void pressButton() {
@@ -71,10 +81,11 @@ public class Controller {
         cnt++;
     }
 
+
     public void setTextOdd() throws IOException {
         labelEven.setText(stopwatchEven.getTimeSec());
         labelOdd.setText(stopwatchOdd.getTimeSec());
-        day.setUsefullTime(stopwatchEven.getTimeSec());
+        day.setUsefulTime(stopwatchEven.getTimeSec());
         repo.save();
     }
 
@@ -84,6 +95,14 @@ public class Controller {
         day.setUselessTime(stopwatchOdd.getTimeSec());
         repo.save();
     }
+    @FXML
+    private void pressButton2() throws Exception {
+        timer.cancel();
+        Statistic stat = new Statistic();
+        stat.start(new Stage());
+    }
+    
+    
 
     public int getCnt() {
         return cnt;
