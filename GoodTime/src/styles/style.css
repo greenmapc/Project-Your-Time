@@ -40,3 +40,8 @@
     -fx-preHeight:63;
     -fx-preWidth:235;
 }
+.textTime {
+    -fx-font-size:40;
+    -fx-text-fill:#ffffffc4;
+
+}
