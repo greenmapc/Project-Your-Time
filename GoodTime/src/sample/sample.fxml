@@ -16,21 +16,23 @@
    <children>       
 <!--     <StackPane layoutX="192.0" layoutY="216.0">-->
 <!--         <children>-->
-            <Button fx:id="button" layoutX="230.0" layoutY="225.0" mnemonicParsing="false" onAction="#pressButton" text="GO">
+            <Button fx:id="button" layoutX="240.0" layoutY="250.0" mnemonicParsing="false" onAction="#pressButton" text="GO">
             </Button>
 <!--         </children>
       </StackPane>-->
-      <Label fx:id="labelEven" layoutX="25.0" layoutY="100.0" styleClass="timerLabel">
+      <Label fx:id="labelEven" layoutX="23.0" layoutY="140.0" styleClass="timerLabel">
          <font>
             <Font size="50.0" />
          </font>
       </Label>
-      <Label fx:id="labelOdd" layoutX="320.0" layoutY="100.0" styleClass="timerLabel">
+      <Label fx:id="labelOdd" layoutX="320.0" layoutY="140.0" styleClass="timerLabel">
          <font>
             <Font size="50.0" />
          </font>
       </Label>
-      <Button fx:id="button1" layoutX="271.0" layoutY="310.0" mnemonicParsing="false" text="click" onAction = "#pressButton2"/>
+      <Label layoutX="92.0" layoutY="68.0" prefHeight="63.0" prefWidth="151.0" styleClass="textTime" text="Useful" />
+      <Label layoutX="370.0" layoutY="68.0" prefHeight="63.0" prefWidth="151.0" styleClass="textTime" text="Useless" />
+<!--       <Button fx:id="button1" layoutX="271.0" layoutY="310.0" mnemonicParsing="false" text="click" onAction = "#pressButton2"/> -->
 <!--      <Label fx:id="labelStartText" layoutX="185.0" layoutY="50.0" text="YOUR TIME">
          <font>
             <Font size="48.0" />
