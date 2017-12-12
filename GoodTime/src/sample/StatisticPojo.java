@@ -1,5 +1,5 @@
 package sample;
- 
+
 public class StatisticPojo {
     private String dayColumn;
     private String usefulTimeColumn;
@@ -10,7 +10,7 @@ public class StatisticPojo {
         this.usefulTimeColumn = usefulTimeColumn;
         this.uselesslTimeColumn = uselesslTimeColumn;
     }
-    
+
 
     public String getDayColumn() {
         return dayColumn;
@@ -35,7 +35,7 @@ public class StatisticPojo {
     public void setUselesslTimeColumn(String uselesslTimeColumn) {
         this.uselesslTimeColumn = uselesslTimeColumn;
     }
- 
+
     public StatisticPojo() {
     }
 

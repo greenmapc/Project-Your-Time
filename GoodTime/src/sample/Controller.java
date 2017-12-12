@@ -4,12 +4,15 @@ import entity.Day;
 import entity.Stopwatch;
 import entity.StoreOfDays;
 import entity.Updater;
+
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.Button;
 
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -35,7 +38,7 @@ public class Controller {
     private Timer timer;
     private Day day;
     private StoreOfDays repo;
-    
+
 
 
     @FXML
@@ -57,10 +60,11 @@ public class Controller {
             repo.add(day);
         }
         timer.schedule(updater, 0, 1000);
- 
+
     }
 
-    public void pressButton() {
+    @FXML
+    private void pressButton() {
         if (cnt % 2 == 0) {
             stopwatchEven.start();
             stopwatchOdd.stop();
@@ -96,13 +100,26 @@ public class Controller {
         repo.save();
     }
     @FXML
-    private void pressButton2() throws Exception {
-        timer.cancel();
+    private void getStatistic() throws Exception {
+        // timer.cancel();
         Statistic stat = new Statistic();
         stat.start(new Stage());
     }
-    
-    
+
+    @FXML
+    private void getHelp() throws FileNotFoundException {
+        Desktop desktop = null;
+        if (Desktop.isDesktopSupported()) {
+            desktop = Desktop.getDesktop();
+        }
+        try {
+            desktop.open(new File("src/help/help.txt"));
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+        }
+    }
+
+
 
     public int getCnt() {
         return cnt;
