@@ -1,4 +1,17 @@
-Press go to start stopwatch.
-Press go to switch useful/useless time
-Press Statistic - Show tableStat , to see you useful and useless time by a date
-Press Statistic - Show graphicStat , to it in the graph
+Your Time 
+
+Main screen 
+The main screen of Your Time is 2 counters of useful and useless time. If you want to start the countdown of useful time, press the green GO button, if you need to start the countdown of useless time, press the red GO button. When you reopen the application in one day, the time counters will contain information about your useful and useless time.
+
+Statistics 
+Your time keeps statistics of your useful and useless time. 
+
+Table 
+If you want to view your statistics by day as a table, in the navigation menu select Statistics -> show statistics, a window will open in which there will be a table containing the following data:
+1 column - all days when the application was used in the format year, month, day. 
+2 column - useful time in the format hours, minutes, seconds. 
+3 column - useless time in the format hours, minutes, seconds.
+
+If you want to view statistics in the form of a graph, in the navigation menu select Statistics -> show graphic.there will be a window, which contains the graph for the last 10 active days . The red curve is useless time, the green one is useful. Horizontally, the graph shows the date, in vertical - the time in hours. Also you can see your statistics for the last 30 active days, if in the same window you select 30 days, to the right of the graph.
+
+2017
