@@ -17,18 +17,21 @@ public class Updater extends TimerTask {
 
     @Override
     public void run() {
-        Platform.runLater(() -> {
-            if (contr.getCnt() % 2 == 0) {
-                try {
-                    contr.setTextEven();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            } else {
-                try {
-                    contr.setTextOdd();
-                } catch (IOException e) {
-                    e.printStackTrace();
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                if (contr.getCnt() % 2 == 0) {
+                    try {
+                        contr.setTextEven();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                } else {
+                    try {
+                        contr.setTextOdd();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                 }
             }
         });
