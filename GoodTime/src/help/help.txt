@@ -1,1 +1,4 @@
-????
+Press go to start stopwatch.
+Press go to switch useful/useless time
+Press Statistic - Show tableStat , to see you useful and useless time by a date
+Press Statistic - Show graphicStat , to it in the graph

@@ -1,16 +1,16 @@
-package sample;
-
-public class StatisticPojo {
+package entity;
+ 
+public class StatisticView {
     private String dayColumn;
     private String usefulTimeColumn;
     private String uselesslTimeColumn;
 
-    public StatisticPojo(String dayColumn, String usefulTimeColumn, String uselesslTimeColumn) {
+    public StatisticView(String dayColumn, String usefulTimeColumn, String uselesslTimeColumn) {
         this.dayColumn = dayColumn;
         this.usefulTimeColumn = usefulTimeColumn;
         this.uselesslTimeColumn = uselesslTimeColumn;
     }
-
+    
 
     public String getDayColumn() {
         return dayColumn;
@@ -35,8 +35,8 @@ public class StatisticPojo {
     public void setUselesslTimeColumn(String uselesslTimeColumn) {
         this.uselesslTimeColumn = uselesslTimeColumn;
     }
-
-    public StatisticPojo() {
+ 
+    public StatisticView() {
     }
 
 }

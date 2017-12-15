@@ -45,3 +45,18 @@
     -fx-text-fill:#ffffffc4;
 
 }
+
+.default-color0.chart-series-line {
+    -fx-stroke: #66ff99;
+}
+.default-color1.chart-series-line {
+    -fx-stroke: #ff5050;
+}
+ 
+.chart-series-line {    
+    -fx-stroke-width: 2px;
+} 
+.default-color0.chart-line-symbol {-fx-background-color: #66ff99, white; } 
+.default-color1.chart-line-symbol {-fx-background-color: #ff5050, white; } 
+
+

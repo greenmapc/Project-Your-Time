@@ -1,4 +1,4 @@
-package sample;
+package Controllers;
 
 import entity.Day;
 import entity.Stopwatch;
@@ -6,7 +6,7 @@ import entity.StoreOfDays;
 import entity.Updater;
 
 import java.awt.*;
-import java.awt.event.ActionEvent;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.Button;
@@ -18,18 +18,17 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Timer;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
 
-public class Controller {
+import javafx.stage.Stage;
+import Application.LineChartApp;
+import Application.TableApp;
+
+public class MainController {
     @FXML
     private Label labelEven, labelOdd, labelStartText;
     @FXML
     private Button button;
-    private Button button1;
-    private Button button2;
+
 
     private Stopwatch stopwatchEven;
     private Stopwatch stopwatchOdd;
@@ -40,20 +39,19 @@ public class Controller {
     private StoreOfDays repo;
 
 
-
     @FXML
     public void initialize() throws FileNotFoundException {
         stopwatchEven = new Stopwatch();
         stopwatchOdd = new Stopwatch();
-        updater =  new Updater(this);
-        timer =  new Timer();
+        updater = new Updater(this);
+        timer = new Timer();
         repo = new StoreOfDays();
         Date dateNow = new Date();
         SimpleDateFormat format = new SimpleDateFormat("yyyy.MM.dd");
         day = new Day();
         day.setDate(format.format(dateNow));
-        if(repo.size()!=0 && repo.get(repo.size()-1).getDate().equals(day.getDate())){
-            day = repo.get(repo.size()-1);
+        if (repo.size() != 0 && repo.get(repo.size() - 1).getDate().equals(day.getDate())) {
+            day = repo.get(repo.size() - 1);
             stopwatchEven.setCurrentTime(Day.getSec(day.getUsefulTime()));
             stopwatchOdd.setCurrentTime(Day.getSec(day.getUselessTime()));
         } else {
@@ -99,11 +97,17 @@ public class Controller {
         day.setUselessTime(stopwatchOdd.getTimeSec());
         repo.save();
     }
+
     @FXML
     private void getStatistic() throws Exception {
-        // timer.cancel();
-        Statistic stat = new Statistic();
+        TableApp stat = new TableApp();
         stat.start(new Stage());
+    }
+
+    @FXML
+    private void graphic() throws Exception {
+        LineChartApp chart = new LineChartApp();
+        chart.start(new Stage());
     }
 
     @FXML
@@ -120,11 +124,9 @@ public class Controller {
     }
 
 
-
     public int getCnt() {
         return cnt;
     }
 
 
 }
-

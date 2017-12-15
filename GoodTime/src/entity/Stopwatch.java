@@ -25,8 +25,7 @@ public class Stopwatch {
         }
     }
 
-    public String getTimeSec()
-    {
+    public String getTimeSec() {
         long elapsed;
         if (running) {
             elapsed = (System.currentTimeMillis() - this.startTime + this.currentTime) / 1000;
@@ -37,9 +36,9 @@ public class Stopwatch {
         long cur = elapsed;
         int[] res = new int[6];
 
-        int hours = (int)elapsed / 3600;
-        int minutes = ((int)elapsed % 3600) / 60;
-        int seconds = (int)elapsed % 60;
+        int hours = (int) elapsed / 3600;
+        int minutes = ((int) elapsed % 3600) / 60;
+        int seconds = (int) elapsed % 60;
 
         format(hours, res, "hours");
         format(minutes, res, "minutes");
@@ -51,23 +50,21 @@ public class Stopwatch {
 
     private void format(long time, int[] res, String type) {
         int ind1 = 4, ind2 = 5;
-        if(type.equals("minutes")) {
+        if (type.equals("minutes")) {
             ind1 = 2;
             ind2 = 3;
-        }
-        else {
-            if(type.equals("hours")) {
+        } else {
+            if (type.equals("hours")) {
                 ind1 = 0;
                 ind2 = 1;
             }
         }
 
-        if(time > 9) {
-            res[ind1] = (int)time / 10;
-            res[ind2] = (int)time % 10;
-        }
-        else {
-            res[ind2] = (int)time;
+        if (time > 9) {
+            res[ind1] = (int) time / 10;
+            res[ind2] = (int) time % 10;
+        } else {
+            res[ind2] = (int) time;
         }
     }
 
