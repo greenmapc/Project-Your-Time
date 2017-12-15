@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="GoodTime:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/GoodTime_jar</output-path>
+    <root id="archive" name="GoodTime.jar">
+      <element id="module-output" name="GoodTime" />
+    </root>
+  </artifact>
+</component>
